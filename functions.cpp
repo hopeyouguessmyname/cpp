@@ -36,3 +36,16 @@ void _013_const()
                               // passing 'const DateOfBirth' as 'this' argument discards qualifiers [-fpermissive]
                               // Invalid arguments 'Candidates are: void changeDay(short int)'
 }
+
+void _021_inline()
+{
+
+}
+void _022_inline()
+{
+
+}
+void _023_inline()
+{
+
+}
