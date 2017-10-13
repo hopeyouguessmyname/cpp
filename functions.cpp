@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <iostream>
 
-// klasy u¿ywane w funkcjach:
-#include "DateOfBirth.h"
-
 void _011_const()
 {
   #define MINUTE 60
