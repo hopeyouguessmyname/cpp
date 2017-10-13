@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string>
 
+#include "functions.h"
 
 
 typedef void( * funkcjaT )(); // wskaŸnik na funkcjê
@@ -9,7 +10,8 @@ void print(std::string function_name, funkcjaT pFunkcja);
 
 int main()
 {
-
+  print("_011_const", _011_const);
+  
   return 0;
 }
 
