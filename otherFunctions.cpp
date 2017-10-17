@@ -1,7 +1,19 @@
 #include <stdlib.h>
 #include <cstring>
+#include <fstream>
 
 #include "otherFunctions.h"
+
+void writeLineToFile(std::string fileName, std::string line)
+{
+  std::fstream file(fileName.c_str(), std::ios::out | std::ios::app);
+  if(file.good() == true)
+  {
+    file << line << std::endl;
+    file.flush();
+    file.close();
+  }
+}
 
 namespace static_objects
 {

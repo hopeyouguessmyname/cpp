@@ -1,5 +1,7 @@
 #include <string>
 
+void writeLineToFile(std::string fileName, std::string line);
+
 namespace static_objects
 {
   char* modifyString1(char *line, char from, char to, int sizeOfString);

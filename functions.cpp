@@ -5,8 +5,13 @@
 #include "functions.h"
 #include "otherFunctions.h"
 
-// klasy u≈ºywane w funkcjach:
+// klasy uøywane w funkcjach:
 #include "DateOfBirth.h"
+#include "DateOfBirth.h"
+#include "Base.h"
+#include "Derived.h"
+#include "Base2.h"
+#include "Derived2.h"
 
 void _011_const()
 {
@@ -84,4 +89,50 @@ void _022_inline()
 void _023_inline()
 {
 
+}
+
+void _031_virtual()
+{
+  std::cout << "Size for Base class: " << sizeof(Base) << std::endl;
+  std::cout << "Size for Derived class: " << sizeof(Derived) << std::endl;
+  std::cout << "Size for Base2 class: " << sizeof(Base2) << std::endl;
+  std::cout << "Size for Derived2 class: " << sizeof(Derived2) << std::endl;
+}
+
+void _032_virtual()
+{
+  clock_t start, finish;
+  int sizeOfTable=1000;
+  Base* tab[sizeOfTable];
+  Base2* tab2[sizeOfTable];
+  for(int i=0; i < sizeOfTable; i++)
+  {
+    tab[i]=new Derived();
+    tab2[i]=new Derived2();
+  }
+
+  start=clock();
+  for(int i=0; i < sizeOfTable; i++)
+  {
+    tab[i]->print();
+  }
+  finish=clock();
+  std::cout << "RÛønica czasÛw z narzutem: " << finish-start << "ms" << std::endl;
+
+  start=clock();
+  for(int i=0; i < sizeOfTable; i++)
+  {
+    tab2[i]->print();
+  }
+  finish=clock();
+  std::cout << "RÛønica czasÛw bez narzutu: " << finish-start << "ms" << std::endl;
+}
+
+void _035_virtual()
+{
+  Base* b;
+  b=new Base();
+  b->print();
+  b=new Derived();
+  b->print();
 }
