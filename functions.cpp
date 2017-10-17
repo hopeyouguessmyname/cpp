@@ -43,9 +43,11 @@ void _013_const()
 
 void _015_static()
 {
-  char *str1="abcdefg";
-  char *str2="opqrstuvw";
-  char *str3="efghijklmnop";
+//  char *str1="abcdefg"; // warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+//  char *str1=(char *)"abcdefg"; // rzutowanie w C
+  char *str1=const_cast<char*>("abcdefg");
+  char *str2=const_cast<char*>("opqrstuvw");
+  char *str3=const_cast<char*>("efghijklmnop");
 
   printf("%s\n", static_objects::modifyString1(str1, 0x64, 0x65, strlen(str1)));
   printf("%s\n", static_objects::modifyString1(str2, 0x70, 0x71, strlen(str2)));
