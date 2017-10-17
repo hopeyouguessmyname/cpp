@@ -52,3 +52,16 @@ namespace static_objects
 //        *it=to;
   }
 }
+
+namespace function_overloading
+{
+  int f(int i)
+  {
+    return i+5;
+  }
+
+  int f(double d)
+  {
+    return d+5;
+  }
+}

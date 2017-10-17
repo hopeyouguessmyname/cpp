@@ -136,3 +136,11 @@ void _035_virtual()
   b=new Derived();
   b->print();
 }
+
+void _041_overloading()
+{
+  int i=2;
+  double d=2.4;
+  std::cout << "f(2)=" << function_overloading::f(i) << std::endl;
+  std::cout << "f(2.4)=" << function_overloading::f(d) << std::endl;
+}

@@ -11,3 +11,5 @@ void _023_inline();
 void _031_virtual();
 void _032_virtual();
 void _035_virtual();
+
+void _041_overloading();

@@ -17,9 +17,10 @@ int main()
 //  print("_021_inline", _021_inline);
 //  print("_022_inline", _022_inline);
 //  print("_023_inline", _023_inline);
-  print("_031_virtual", _031_virtual);
-  print("_032_virtual", _032_virtual);
-  print("_035_virtual", _035_virtual);
+//  print("_031_virtual", _031_virtual);
+//  print("_032_virtual", _032_virtual);
+//  print("_035_virtual", _035_virtual);
+  print("_041_overloading", _041_overloading);
   
   return 0;
 }
