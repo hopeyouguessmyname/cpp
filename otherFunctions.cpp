@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <cstring>
 #include <fstream>
+#include <iostream>
 
 #include "otherFunctions.h"
 
@@ -63,5 +64,18 @@ namespace function_overloading
   int f(double d)
   {
     return d+5;
+  }
+}
+
+namespace const_cast_namespace
+{
+  void printInteger(int* i)
+  {
+    std::cout << "i=" << *i << std::endl;
+  }
+
+  void printInteger(int& i)
+  {
+    std::cout << "i=" << i << std::endl;
   }
 }

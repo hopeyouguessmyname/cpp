@@ -18,3 +18,6 @@ void _071_union();
 
 void _081_pointerVSreferency();
 void _082_pointerVSreferency();
+
+void _091_const_cast();
+void _092_const_cast();

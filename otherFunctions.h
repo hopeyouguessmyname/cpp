@@ -17,3 +17,10 @@ namespace function_overloading
   int f(double);
   //double f(double); // ambiguating new declaration of 'double f(double)'
 }
+
+namespace const_cast_namespace
+{
+  // funkcje na u¿ytek przedstawienia rzutowania const_cast
+  void printInteger(int*);
+  void printInteger(int&);
+}

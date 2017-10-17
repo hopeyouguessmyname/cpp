@@ -21,9 +21,11 @@ int main()
 //  print("_032_virtual", _032_virtual);
 //  print("_035_virtual", _035_virtual);
 //  print("_041_overloading", _041_overloading);
-  print("_071_union", _071_union);
-  print("_081_pointerVSreferency", _081_pointerVSreferency);
+//  print("_071_union", _071_union);
+//  print("_081_pointerVSreferency", _081_pointerVSreferency);
   print("_082_pointerVSreferency", _082_pointerVSreferency);
+  print("_091_const_cast", _091_const_cast);
+  print("_092_const_cast", _092_const_cast);
   
   return 0;
 }

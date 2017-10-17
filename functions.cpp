@@ -206,3 +206,21 @@ void _082_pointerVSreferency()
 //  k=&j; //assignment of read-only variable 'k'
 //  std::cout << "*k=" << *k << std::endl;
 }
+
+void _091_const_cast()
+{
+  const int i=9;
+  const int& j=i;
+//  const_cast_namespace::printInteger(&i); // invalid conversion from 'const int*' to 'int*' [-fpermissive]
+  const_cast_namespace::printInteger(const_cast<int*> (&i));
+//  const_cast_namespace::printInteger(j); // binding 'const int' to reference of type 'int&' discards qualifiers
+  const_cast_namespace::printInteger(const_cast<int&> (j));
+}
+
+void _092_const_cast()
+{
+  double pi=3.14; // pi+=0.01; // mo¿na zmienic
+  const double* zmienna=&pi; // *zmienna+=0.01; // nie mo¿na zmienic
+  double* d=const_cast<double*>(zmienna); // *d+=0.01; // mo¿na zmienic
+  std::cout << *d << std::endl;
+}
