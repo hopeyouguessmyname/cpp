@@ -13,3 +13,5 @@ void _032_virtual();
 void _035_virtual();
 
 void _041_overloading();
+
+void _071_union();

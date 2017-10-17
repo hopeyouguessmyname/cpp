@@ -20,7 +20,8 @@ int main()
 //  print("_031_virtual", _031_virtual);
 //  print("_032_virtual", _032_virtual);
 //  print("_035_virtual", _035_virtual);
-  print("_041_overloading", _041_overloading);
+//  print("_041_overloading", _041_overloading);
+  print("_071_union", _071_union);
   
   return 0;
 }

@@ -144,3 +144,30 @@ void _041_overloading()
   std::cout << "f(2)=" << function_overloading::f(i) << std::endl;
   std::cout << "f(2.4)=" << function_overloading::f(d) << std::endl;
 }
+
+void _071_union()
+{
+  union Unn
+  {
+      //static double d; // Union::d may not be static because it is a member of a union
+      int n;              // occupies 4 bytes
+      unsigned int s[2];  // occupies 8 bytes
+      char c;             // occupies 1 byte
+  };                      // the whole union occupies 8 bytes
+
+  std::cout << "sizeof(int)=" << sizeof(int) << std::endl;
+  std::cout << "sizeof(unsigned int[2])=" << sizeof(unsigned int[2]) << std::endl;
+  std::cout << "sizeof(char)=" << sizeof(char) << std::endl;
+
+  std::cout << "sizeof(Unn)=" << sizeof(Unn) << std::endl;
+
+  Unn u;
+  u.s[0]=0;
+  u.s[1]=0;
+  std::cout << "s[0]=" << std::hex << u.s[0] << std::endl;
+  std::cout << "s[1]=" << std::hex << u.s[1] << std::endl;
+  u.c=255;
+  std::cout << "Zmienna zapisana na jednym bajcie nadpisuje najm³odszy bajt pozosta³ych zmiennych." << std::endl;
+  std::cout << "s[0]=" << std::hex << u.s[0] << std::endl;
+  std::cout << "s[1]=" << std::hex << u.s[1] << std::endl;
+}
