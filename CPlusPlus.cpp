@@ -13,6 +13,7 @@ int main()
   print("_011_const", _011_const);
   print("_012_const", _012_const);
   print("_013_const", _013_const);
+  print("_015_static", _015_static);
   print("_021_inline", _021_inline);
   print("_022_inline", _022_inline);
   print("_023_inline", _023_inline);
