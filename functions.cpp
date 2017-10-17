@@ -171,3 +171,38 @@ void _071_union()
   std::cout << "s[0]=" << std::hex << u.s[0] << std::endl;
   std::cout << "s[1]=" << std::hex << u.s[1] << std::endl;
 }
+
+void _081_pointerVSreferency()
+{
+  int i=23;
+
+  std::cout << "Referencja musi byæ zainicjalizowana w momencie deklaracji." << std::endl;
+  int &r = i;
+  std::cout << "WskaŸnik nie musi." << std::endl;
+  int *j = &i;
+  std::cout << "Sta³y wskaŸnik te¿ nie musi." << std::endl;
+  int const *k = &i;
+
+  std::cout << "this line is only to get variables used: "<< r << *j << *k << std::endl;
+}
+
+void _082_pointerVSreferency()
+{
+  int i=1, j=2;
+
+  int &r = i;
+  std::cout << "Referencji nie mo¿na przestawiæ na inn¹ zmienn¹. WskaŸnikowi mo¿na przypisaæ adres innej zmiennej" << std::endl;
+  r = j; // przypisanie referencji wartoœci zmiennej j
+  std::cout << "r=" << r << std::endl;
+  std::cout << "i=" << i << std::endl;
+  i=7;
+  std::cout << "i=" << i << std::endl;
+  //referencja dalej wskazuje na zmienn¹ i
+
+  std::cout << "O ile nie jest sta³ym wskaŸnikiem." << std::endl;
+//  int* const k; //uninitialized const 'k'
+  int* const k=&i;
+  std::cout << "*k=" << *k << std::endl;
+//  k=&j; //assignment of read-only variable 'k'
+//  std::cout << "*k=" << *k << std::endl;
+}

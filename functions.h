@@ -15,3 +15,6 @@ void _035_virtual();
 void _041_overloading();
 
 void _071_union();
+
+void _081_pointerVSreferency();
+void _082_pointerVSreferency();
