@@ -21,3 +21,8 @@ void _082_pointerVSreferency();
 
 void _091_const_cast();
 void _092_const_cast();
+
+void _101_static_cast();
+void _102_static_cast();
+void _103_static_cast();
+void _104_static_cast();

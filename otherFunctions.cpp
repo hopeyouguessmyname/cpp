@@ -79,3 +79,58 @@ namespace const_cast_namespace
     std::cout << "i=" << i << std::endl;
   }
 }
+
+namespace bitset_namespace
+{
+  union dataFloat
+  {
+    float input;   // assumes sizeof(float) == sizeof(int)
+    int   output;
+  };
+
+  union dataDouble
+    {
+      double input;   // assumes sizeof(double) == sizeof(long)
+      long long   output;
+    };
+
+  std::bitset<32ul> floatToBitset(float f)
+  {
+    dataFloat dataUnion;
+    dataUnion.input = f;
+    std::bitset<32ul> bits(dataUnion.output);
+    return bits;
+  }
+
+  std::bitset<64ul> doubleToBitset(double d)
+  {
+    dataDouble dataUnion;
+    dataUnion.input = d;
+    std::bitset<64ul> bits(dataUnion.output);
+    return bits;
+  }
+
+  std::bitset<16ul> shortToBitset(short s)
+  {
+    std::bitset<16ul> bits(s);
+    return bits;
+  }
+
+  std::bitset<32ul> intToBitset(int i)
+  {
+    std::bitset<32ul> bits(i);
+    return bits;
+  }
+
+  std::bitset<32ul> longToBitset(long l)
+  {
+    std::bitset<32ul> bits(l);
+    return bits;
+  }
+
+  std::bitset<64ul> longlongToBitset(long long ll)
+  {
+    std::bitset<64ul> bits(ll);
+    return bits;
+  }
+}

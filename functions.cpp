@@ -224,3 +224,80 @@ void _092_const_cast()
   double* d=const_cast<double*>(zmienna); // *d+=0.01; // mo¿na zmienic
   std::cout << *d << std::endl;
 }
+
+void _101_static_cast()
+{
+  float f=4.567856; // pojedyncza precyzja - dok³adnoœc 6-7 cyfr po przecinku
+  std::cout << bitset_namespace::floatToBitset(f) << std::endl;
+
+  double d=4.567856; // podwójna precyzja - dok³adnosc 15-16 cyfr po przecinku
+  std::cout << bitset_namespace::doubleToBitset(d) << std::endl;
+
+  double d2=static_cast<double>(f);
+  std::cout << bitset_namespace::doubleToBitset(d2) << std::endl;
+
+//  rzutowanie static_cast<double>(float) przycina precyzjê liczby typu double do typu float
+//  przyciêcie precyzji polega na wyzerowaniu tych bitów z mantysy liczby typu double,
+//  które wychodz¹ poza rozmiar mantysy liczby typu float
+}
+
+void _102_static_cast()
+{
+  float f=4.567856;
+  std::cout << bitset_namespace::floatToBitset(f) << std::endl;
+
+  double d=4.567856;
+  std::cout << bitset_namespace::doubleToBitset(d) << std::endl;
+
+  float f2=static_cast<float>(d);
+  std::cout << bitset_namespace::floatToBitset(f2) << std::endl;
+
+//  rzutowanie static_cast<float>(double) przycina precyzjê liczby typu double do typu float
+//  przyciêcie precyzji polega na wybraniu pierwszych 23 bitów z mantysy liczby typu double
+//  i wstawieniu ich do mantysy liczby typu float.
+}
+
+void _103_static_cast()
+{
+  float f=4.567856;
+  std::cout << bitset_namespace::floatToBitset(f) << std::endl;
+
+  short s=static_cast<short>(f);
+  std::cout << bitset_namespace::shortToBitset(s) << std::endl;
+
+  int i=static_cast<int>(f);
+  std::cout << bitset_namespace::intToBitset(i) << std::endl;
+
+  long l=static_cast<long>(f);
+  std::cout << bitset_namespace::longToBitset(l) << std::endl;
+
+  long long ll=static_cast<long long>(f);
+  std::cout << bitset_namespace::longlongToBitset(ll) << std::endl;
+}
+
+void _104_static_cast()
+{
+  short s=4;
+  std::cout << bitset_namespace::shortToBitset(s) << std::endl;
+
+  float f=static_cast<float>(s);
+  std::cout << bitset_namespace::floatToBitset(f) << std::endl;
+
+  int i=4;
+  std::cout << bitset_namespace::intToBitset(i) << std::endl;
+
+  f=static_cast<float>(i);
+  std::cout << bitset_namespace::floatToBitset(f) << std::endl;
+
+  long l=4;
+  std::cout << bitset_namespace::longToBitset(l) << std::endl;
+
+  f=static_cast<float>(l);
+  std::cout << bitset_namespace::floatToBitset(f) << std::endl;
+
+  long long ll=4;
+  std::cout << bitset_namespace::longlongToBitset(ll) << std::endl;
+
+  f=static_cast<float>(ll);
+  std::cout << bitset_namespace::floatToBitset(f) << std::endl;
+}

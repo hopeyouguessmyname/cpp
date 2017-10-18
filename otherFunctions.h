@@ -1,4 +1,5 @@
 #include <string>
+#include <bitset>
 
 void writeLineToFile(std::string fileName, std::string line);
 
@@ -23,4 +24,14 @@ namespace const_cast_namespace
   // funkcje na u¿ytek przedstawienia rzutowania const_cast
   void printInteger(int*);
   void printInteger(int&);
+}
+
+namespace bitset_namespace
+{
+  std::bitset<32ul> floatToBitset(float);
+  std::bitset<64ul> doubleToBitset(double);
+  std::bitset<16ul> shortToBitset(short);
+  std::bitset<32ul> intToBitset(int);
+  std::bitset<32ul> longToBitset(long);
+  std::bitset<64ul> longlongToBitset(long long);
 }
