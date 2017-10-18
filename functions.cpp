@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <cstring>
+#include <vector>
 
 #include "functions.h"
 #include "otherFunctions.h"
@@ -12,6 +13,7 @@
 #include "Derived.h"
 #include "Base2.h"
 #include "Derived2.h"
+#include "Point.h"
 
 void _011_const()
 {
@@ -300,4 +302,35 @@ void _104_static_cast()
 
   f=static_cast<float>(ll);
   std::cout << bitset_namespace::floatToBitset(f) << std::endl;
+}
+
+void _201_auto()
+{
+  std::vector<int> v={1,23, 34, 45, 56, 67, 78, 89, 90};
+//  - could not convert '{1, 23, 34, 45, 56, 67, 78, 89, 90}' from '<brace-enclosed initializer list>' to 'std::vector<int>'
+//  - in C++98 'v' must be initialized by constructor, not by '{...}'
+//  C/C++ Build -> Settings -> Tool Settings -> Cygwin C++ Compiler -> Miscellaneous -> Other Flags.
+//  Put -std=c++0x (or for newer compiler version -std=c++11 at the end).
+  for(auto it=v.begin(); it!=v.end(); it++)
+  {
+    std::cout << *it << ", ";
+  } std::cout << std::endl;
+//  Zastosowanie: Ograniczenie rozwlek³oœci kodu
+//  Ten sam efekt mo¿na uzyskac za pomoc¹ typedef
+  typedef std::vector<int>::iterator iter;
+  for(iter it=v.begin(); it!=v.end(); it++)
+  {
+    std::cout << *it << ", ";
+  } std::cout << std::endl;
+}
+
+void _202_auto()
+{
+  Point<int> P1(11, 22, 33);
+  Point<double> P2(1.23, 2.34, 3.45);
+
+  auto A = P1;
+  auto B = P2;
+//  docelowo przypisywana wartosc ma byc zwracana z funkcji.
+//  funkcja ta powinna zwracac typ szablonowy.
 }

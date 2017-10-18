@@ -25,11 +25,13 @@ int main()
 //  print("_081_pointerVSreferency", _081_pointerVSreferency);
 //  print("_082_pointerVSreferency", _082_pointerVSreferency);
 //  print("_091_const_cast", _091_const_cast);
-  print("_092_const_cast", _092_const_cast);
-  print("_101_static_cast", _101_static_cast);
-  print("_102_static_cast", _102_static_cast);
-  print("_103_static_cast", _103_static_cast);
+//  print("_092_const_cast", _092_const_cast);
+//  print("_101_static_cast", _101_static_cast);
+//  print("_102_static_cast", _102_static_cast);
+//  print("_103_static_cast", _103_static_cast);
   print("_104_static_cast", _104_static_cast);
+  print("_201_auto", _201_auto);
+  print("_202_auto", _202_auto);
   
   return 0;
 }

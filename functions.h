@@ -26,3 +26,7 @@ void _101_static_cast();
 void _102_static_cast();
 void _103_static_cast();
 void _104_static_cast();
+
+// C++11
+void _201_auto(); // Autometyczne okreœlenie typu
+void _202_auto(); // Autometyczne okreœlenie typu
