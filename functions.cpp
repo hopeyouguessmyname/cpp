@@ -334,3 +334,19 @@ void _202_auto()
 //  docelowo przypisywana wartosc ma byc zwracana z funkcji.
 //  funkcja ta powinna zwracac typ szablonowy.
 }
+
+void _211_nullptr()
+{
+//  Cplusplus_11::f(NULL); // call of `f(NULL)` is ambiguous
+  Cplusplus_11::f(nullptr);
+}
+
+void _212_nullptr()
+{
+  std::vector<Point<int>*> vec = {new Point<int>(1,2,3), nullptr, new Point<int>(3,4,5)};
+  for(auto it=vec.begin(); it < vec.end(); it++)
+  {
+    if((*it)!=nullptr)
+      (*it)->print();
+  }
+}

@@ -35,3 +35,9 @@ namespace bitset_namespace
   std::bitset<32ul> longToBitset(long);
   std::bitset<64ul> longlongToBitset(long long);
 }
+
+namespace Cplusplus_11
+{
+  void f(char*);
+  void f(int);
+}

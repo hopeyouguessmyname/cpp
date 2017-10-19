@@ -134,3 +134,15 @@ namespace bitset_namespace
     return bits;
   }
 }
+
+namespace Cplusplus_11
+{
+  void f(char*)
+  {
+    std::cout << "f(char*)" << std::endl;
+  }
+  void f(int)
+  {
+    std::cout << "f(int)" << std::endl;
+  }
+}

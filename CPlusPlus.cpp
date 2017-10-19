@@ -29,9 +29,11 @@ int main()
 //  print("_101_static_cast", _101_static_cast);
 //  print("_102_static_cast", _102_static_cast);
 //  print("_103_static_cast", _103_static_cast);
-  print("_104_static_cast", _104_static_cast);
-  print("_201_auto", _201_auto);
+//  print("_104_static_cast", _104_static_cast);
+//  print("_201_auto", _201_auto);
   print("_202_auto", _202_auto);
+  print("_211_nullptr", _211_nullptr);
+  print("_212_nullptr", _212_nullptr);
   
   return 0;
 }
