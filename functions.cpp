@@ -51,6 +51,32 @@ void _013_const()
                               // Invalid arguments 'Candidates are: void changeDay(short int)'
 }
 
+void _014_preprocessor()
+{
+  #define SEPARATOR '@'
+
+  char line[16];
+//  char *line = (char*)malloc(sizeof(char)*16);
+  strncpy(line, "_______|_______", 15);
+  printf("%s\n", line);
+
+
+  // 1. sposób:
+  char separator[2] = { SEPARATOR };
+  char newline1[16];
+//  char *newline = (char*)malloc(sizeof(char)*16);
+  strcpy(newline1, "_______");
+  strcat(newline1, separator);
+  strcat(newline1, "_______");
+  printf("%s\n", newline1);
+
+  // 2. sposob:
+  char newline2[16];
+//  char newline2 = (char*)malloc(sizeof(char)*16);
+  sprintf(newline2, "_______%c_______", SEPARATOR);
+  printf("%s\n", newline2);
+}
+
 void _015_static()
 {
 //  char *str1="abcdefg"; // warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
