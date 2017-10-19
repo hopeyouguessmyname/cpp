@@ -14,6 +14,9 @@
 #include "Base2.h"
 #include "Derived2.h"
 #include "Point.h"
+#include "Man.h"
+
+#include "Array.h"
 
 void _011_const()
 {
@@ -364,4 +367,23 @@ void _221_constexpr()
 //    {
 //      std::cout << tab2[i] << ", "; // œmieci
 //    } std::cout << std::endl;
+}
+
+void _301_Array()
+{
+  Array<Man> myArray;
+
+  int n=12;
+  for(int i=1; i <= n; i++)
+  {
+    Man* m = new Man(i);
+    myArray.push_back(*m);
+//    delete m; // czy jest potrzebne? - sprawdzic czy nie powoduje wycieków pamiêci
+
+    std::cout << myArray.size() << std::endl;
+  }
+  myArray.display();
+  myArray.pop_back();
+  myArray.pop_back();
+  myArray.display();
 }
