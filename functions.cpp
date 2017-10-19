@@ -15,6 +15,7 @@
 #include "Derived2.h"
 #include "Point.h"
 #include "Man.h"
+#include "Two.h"
 
 #include "Array.h"
 
@@ -120,6 +121,12 @@ void _022_inline()
 void _023_inline()
 {
 
+}
+
+void _029_kompozycja()
+{
+  Two *t = new Two();
+  t->printOne();
 }
 
 void _031_virtual()

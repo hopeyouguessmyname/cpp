@@ -9,6 +9,7 @@ void _021_inline();
 void _022_inline();
 void _023_inline();
 
+void _029_kompozycja();
 void _031_virtual();
 void _032_virtual();
 void _035_virtual();
