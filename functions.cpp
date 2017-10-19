@@ -350,3 +350,18 @@ void _212_nullptr()
       (*it)->print();
   }
 }
+
+void _221_constexpr()
+{
+  int tab[Cplusplus_11::getFive()];
+  for(int i=0; i < Cplusplus_11::getFive(); i++)
+  {
+    std::cout << tab[i] << ", "; // œmieci
+  } std::cout << std::endl;
+
+//  int tab2[5];
+//  for(int i=0; i < 5; i++)
+//    {
+//      std::cout << tab2[i] << ", "; // œmieci
+//    } std::cout << std::endl;
+}

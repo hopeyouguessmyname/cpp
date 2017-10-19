@@ -31,9 +31,10 @@ int main()
 //  print("_103_static_cast", _103_static_cast);
 //  print("_104_static_cast", _104_static_cast);
 //  print("_201_auto", _201_auto);
-  print("_202_auto", _202_auto);
-  print("_211_nullptr", _211_nullptr);
-  print("_212_nullptr", _212_nullptr);
+//  print("_202_auto", _202_auto);
+//  print("_211_nullptr", _211_nullptr);
+//  print("_212_nullptr", _212_nullptr);
+  print("_221_constexpr", _221_constexpr);
   
   return 0;
 }

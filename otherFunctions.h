@@ -40,4 +40,6 @@ namespace Cplusplus_11
 {
   void f(char*);
   void f(int);
+
+  constexpr int getFive(){ return 5; }
 }

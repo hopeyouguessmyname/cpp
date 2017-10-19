@@ -32,3 +32,4 @@ void _201_auto(); // Autometyczne okreúlenie typu
 void _202_auto(); // Autometyczne okreúlenie typu
 void _211_nullptr(); // Wskaünik typu nullptr
 void _212_nullptr(); // Wskaünik typu nullptr
+void _221_constexpr(); // UogÛlnione wyraøenia sta≥e
